@@ -40,14 +40,17 @@ int main(int argc, char **argv)
 	// resize callback
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     
-    triangle_init();
+    texture_init();
+
 	// render loop
 	while(!glfwWindowShouldClose(window)) {
 		processInput(window);
-		
+
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
-		triangle_draw();
+
+		texture_draw();
+
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}

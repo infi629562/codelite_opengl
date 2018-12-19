@@ -10,7 +10,9 @@ set(PROJECT_PATH "${CMAKE_SOURCE_DIR}/opengl_01")
 
 
 #{{{{ User Code 1
-# Place your code here
+execute_process(COMMAND cp -fv ${PROJECT_PATH}/src/Texture/shader.vs .
+				COMMAND cp -fv ${PROJECT_PATH}/src/Texture/shader.fs .)
+
 #}}}}
 
 include_directories(
@@ -65,6 +67,7 @@ set ( C_SRCS
 set ( CXX_SRCS
     ${CMAKE_SOURCE_DIR}/opengl_01/src/main.cpp
     ${CMAKE_SOURCE_DIR}/opengl_01/src/Triangle.cpp
+    ${CMAKE_SOURCE_DIR}/opengl_01/src/Texture/Texture_test.cpp
 )
 
 set_source_files_properties(

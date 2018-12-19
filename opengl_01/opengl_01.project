@@ -23,13 +23,22 @@
     <VirtualDirectory Name="KHR">
       <File Name="include/KHR/khrplatform.h"/>
     </VirtualDirectory>
+    <File Name="include/Shader.h"/>
+    <File Name="include/stb_image.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="src">
     <File Name="src/glad.c"/>
     <File Name="src/main.cpp"/>
     <File Name="src/common.h"/>
     <File Name="src/Triangle.cpp"/>
+    <VirtualDirectory Name="texture">
+      <File Name="src/Texture/Texture_test.cpp"/>
+      <File Name="src/Texture/shader.vs"/>
+      <File Name="src/Texture/shader.fs" ExcludeProjConfig=""/>
+    </VirtualDirectory>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -58,8 +67,14 @@
         <PostConnectCommands/>
         <StartupCommands/>
       </Debugger>
-      <PreBuild/>
-      <PostBuild/>
+      <PreBuild>
+        <Command Enabled="yes">echo "hello" &gt; /tmp/a.txt</Command>
+        <Command Enabled="yes">pwd &gt;&gt; /tmp/a.txt</Command>
+      </PreBuild>
+      <PostBuild>
+        <Command Enabled="yes">echo "hello" &gt; /tmp/b.txt</Command>
+        <Command Enabled="yes"/>
+      </PostBuild>
       <CustomBuild Enabled="no">
         <RebuildCommand/>
         <CleanCommand/>
@@ -74,7 +89,7 @@
         <CustomPostBuild/>
         <CustomPreBuild/>
       </AdditionalRules>
-      <Completion EnableCpp11="no" EnableCpp14="no">
+      <Completion EnableCpp11="yes" EnableCpp14="no">
         <ClangCmpFlagsC/>
         <ClangCmpFlags/>
         <ClangPP/>
@@ -122,6 +137,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
 </CodeLite_Project>

@@ -3,9 +3,9 @@
 #include <iostream>
 
 
-#define LOGD(format, ...)    fprintf(stderr, "%-20s <%03d> D: " format "\n", __FUNCTION__, __LINE__, ##__VA_ARGS__)
-#define LOGE(format, ...)    fprintf(stderr, "%-20s <%03d> E: " format "\n", __FUNCTION__, __LINE__, ##__VA_ARGS__)
-#define LOGI(format, ...)    fprintf(stderr, "%-20s <%03d> I: " format "\n", __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LOGD(format, ...)    fprintf(stdout, "%-20s <%03d> D: " format "\n", __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LOGE(format, ...)    fprintf(stdout, "%-20s <%03d> E: " format "\n", __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LOGI(format, ...)    fprintf(stdout, "%-20s <%03d> I: " format "\n", __FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 #define XDBG(x)  LOGD(#x" = 0x%x", x)
 #define DDBG(x)  LOGD(#x" = %d", x)
@@ -22,4 +22,6 @@
 void triangle_init();
 void triangle_draw();
 
+void texture_init();
+void texture_draw();
 #endif
