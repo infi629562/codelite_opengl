@@ -28,7 +28,7 @@ set(CONFIGURATION_NAME "Debug")
 #}}}}
 
 # Projects
-add_subdirectory(${CMAKE_SOURCE_DIR}/opengl_env)
+add_subdirectory(${CMAKE_SOURCE_DIR}/opengl_01)
 
 
 #{{{{ User Code 3

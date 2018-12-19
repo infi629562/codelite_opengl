@@ -3,6 +3,7 @@
 #include <GLFW/glfw3.h>
 #include "common.h"
 
+
 const char *vertexShaderSource = "#version 330 core\n"
                                  "layout (location = 0) in vec3 aPos;\n"
                                  "void main()\n"
@@ -25,7 +26,62 @@ unsigned int VBO;
 unsigned int VAO;
 int shaderProgram;
 
+int buildShaderInternal(GLuint shader_type, const GLchar *const*string)
+{
+	std::string typeString;
+	switch (shader_type) {
+	case GL_VERTEX_SHADER:
+		typeString.assign("VERTEX");
+		break;
+	case GL_FRAGMENT_SHADER:
+		typeString.assign("FRAGMENT");
+		break;
+	default:
+		LOGE("error shader type: %d", shader_type);
+		return -1;
+	}
+	int shader = glCreateShader(shader_type);
+	glShaderSource(shader, 1, string, NULL);
+	glCompileShader(shader);
 
+	int success;
+	char infoLog[512];
+	glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
+	if (!success) {
+		glGetShaderInfoLog(shader, 512, NULL, infoLog);
+		//std::cout << "ERROR::SHADER::" <<typeString<< "::COMPILATION_FAILED\n"
+		//          << infoLog << std::endl;
+		LOGD("ERROR::SHADER::%s::COMPLATION_FAILED\n%s", typeString.c_str(), infoLog);
+
+	}
+	return shader;
+}
+
+int buildShaderProgram()
+{
+	int vertexShader  = buildShaderInternal(GL_VERTEX_SHADER, &vertexShaderSource);
+	int fragmentShader = buildShaderInternal(GL_FRAGMENT_SHADER, &fragmentShaderSource);
+	//link
+	shaderProgram = glCreateProgram();
+	glAttachShader(shaderProgram, vertexShader);
+	glAttachShader(shaderProgram, fragmentShader);
+	glLinkProgram(shaderProgram);
+
+	int success;
+	char infoLog[512];
+	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+	if (!success) {
+		glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+		//std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n"
+		//          << infoLog << std::endl;
+		LOGD("ERROR::SHADER::PROGRAM::LINKING_FAILED\n%s", infoLog);
+	}
+
+	glDeleteShader(vertexShader);
+	glDeleteShader(fragmentShader);
+
+	return shaderProgram;
+}
 
 void build_shader()
 {
@@ -84,7 +140,7 @@ void build_shader()
 void triangle_init()
 {
 	//build and compile our shader program
-	build_shader();
+	buildShaderProgram();
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
