@@ -2,7 +2,7 @@
 <CodeLite_Project Name="opengl_01" Version="10.0.0" InternalType="Console">
   <Plugins>
     <Plugin Name="qmake">
-      <![CDATA[00010001N0005Debug000000000000]]>
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
     </Plugin>
   </Plugins>
   <Reconciliation>
@@ -10,7 +10,7 @@
     <Excludepaths/>
     <Ignorefiles/>
     <Extensions>
-      <![CDATA[cpp;c;h;hpp;xrc;wxcp;fbp]]>
+      <![CDATA[cpp;c;h;hpp;xrc;wxcp;fbp;vs;fs]]>
     </Extensions>
     <Topleveldir>../opengl_01</Topleveldir>
   </Reconciliation>
@@ -23,19 +23,120 @@
     <VirtualDirectory Name="KHR">
       <File Name="include/KHR/khrplatform.h"/>
     </VirtualDirectory>
+    <VirtualDirectory Name="glm">
+      <VirtualDirectory Name="detail">
+        <File Name="include/glm/detail/_features.hpp"/>
+        <File Name="include/glm/detail/_fixes.hpp"/>
+        <File Name="include/glm/detail/_noise.hpp"/>
+        <File Name="include/glm/detail/_swizzle.hpp"/>
+        <File Name="include/glm/detail/_swizzle_func.hpp"/>
+        <File Name="include/glm/detail/_vectorize.hpp"/>
+        <File Name="include/glm/detail/func_common.hpp"/>
+        <File Name="include/glm/detail/func_exponential.hpp"/>
+        <File Name="include/glm/detail/func_geometric.hpp"/>
+        <File Name="include/glm/detail/func_integer.hpp"/>
+        <File Name="include/glm/detail/func_matrix.hpp"/>
+        <File Name="include/glm/detail/func_packing.hpp"/>
+        <File Name="include/glm/detail/func_trigonometric.hpp"/>
+        <File Name="include/glm/detail/func_vector_relational.hpp"/>
+        <File Name="include/glm/detail/intrinsic_common.hpp"/>
+        <File Name="include/glm/detail/intrinsic_exponential.hpp"/>
+        <File Name="include/glm/detail/intrinsic_geometric.hpp"/>
+        <File Name="include/glm/detail/intrinsic_integer.hpp"/>
+        <File Name="include/glm/detail/intrinsic_matrix.hpp"/>
+        <File Name="include/glm/detail/intrinsic_trigonometric.hpp"/>
+        <File Name="include/glm/detail/intrinsic_vector_relational.hpp"/>
+        <File Name="include/glm/detail/precision.hpp"/>
+        <File Name="include/glm/detail/setup.hpp"/>
+        <File Name="include/glm/detail/type_float.hpp"/>
+        <File Name="include/glm/detail/type_gentype.hpp"/>
+        <File Name="include/glm/detail/type_half.hpp"/>
+        <File Name="include/glm/detail/type_int.hpp"/>
+        <File Name="include/glm/detail/type_mat.hpp"/>
+        <File Name="include/glm/detail/type_mat2x2.hpp"/>
+        <File Name="include/glm/detail/type_mat2x3.hpp"/>
+        <File Name="include/glm/detail/type_mat2x4.hpp"/>
+        <File Name="include/glm/detail/type_mat3x2.hpp"/>
+        <File Name="include/glm/detail/type_mat3x3.hpp"/>
+        <File Name="include/glm/detail/type_mat3x4.hpp"/>
+        <File Name="include/glm/detail/type_mat4x2.hpp"/>
+        <File Name="include/glm/detail/type_mat4x3.hpp"/>
+        <File Name="include/glm/detail/type_mat4x4.hpp"/>
+        <File Name="include/glm/detail/type_vec.hpp"/>
+        <File Name="include/glm/detail/type_vec1.hpp"/>
+        <File Name="include/glm/detail/type_vec2.hpp"/>
+        <File Name="include/glm/detail/type_vec3.hpp"/>
+        <File Name="include/glm/detail/type_vec4.hpp"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="gtc">
+        <File Name="include/glm/gtc/bitfield.hpp"/>
+        <File Name="include/glm/gtc/color_space.hpp"/>
+        <File Name="include/glm/gtc/constants.hpp"/>
+        <File Name="include/glm/gtc/epsilon.hpp"/>
+        <File Name="include/glm/gtc/integer.hpp"/>
+        <File Name="include/glm/gtc/matrix_access.hpp"/>
+        <File Name="include/glm/gtc/matrix_integer.hpp"/>
+        <File Name="include/glm/gtc/matrix_inverse.hpp"/>
+        <File Name="include/glm/gtc/matrix_transform.hpp"/>
+        <File Name="include/glm/gtc/noise.hpp"/>
+        <File Name="include/glm/gtc/packing.hpp"/>
+        <File Name="include/glm/gtc/quaternion.hpp"/>
+        <File Name="include/glm/gtc/random.hpp"/>
+        <File Name="include/glm/gtc/reciprocal.hpp"/>
+        <File Name="include/glm/gtc/round.hpp"/>
+        <File Name="include/glm/gtc/type_precision.hpp"/>
+        <File Name="include/glm/gtc/type_ptr.hpp"/>
+        <File Name="include/glm/gtc/ulp.hpp"/>
+        <File Name="include/glm/gtc/vec1.hpp"/>
+      </VirtualDirectory>
+      <File Name="include/glm/common.hpp"/>
+      <File Name="include/glm/exponential.hpp"/>
+      <File Name="include/glm/ext.hpp"/>
+      <File Name="include/glm/fwd.hpp"/>
+      <File Name="include/glm/geometric.hpp"/>
+      <File Name="include/glm/glm.hpp"/>
+      <File Name="include/glm/integer.hpp"/>
+      <File Name="include/glm/mat2x2.hpp"/>
+      <File Name="include/glm/mat2x3.hpp"/>
+      <File Name="include/glm/mat2x4.hpp"/>
+      <File Name="include/glm/mat3x2.hpp"/>
+      <File Name="include/glm/mat3x3.hpp"/>
+      <File Name="include/glm/mat3x4.hpp"/>
+      <File Name="include/glm/mat4x2.hpp"/>
+      <File Name="include/glm/mat4x3.hpp"/>
+      <File Name="include/glm/mat4x4.hpp"/>
+      <File Name="include/glm/matrix.hpp"/>
+      <File Name="include/glm/packing.hpp"/>
+      <File Name="include/glm/trigonometric.hpp"/>
+      <File Name="include/glm/vec2.hpp"/>
+      <File Name="include/glm/vec3.hpp"/>
+      <File Name="include/glm/vec4.hpp"/>
+      <File Name="include/glm/vector_relational.hpp"/>
+    </VirtualDirectory>
     <File Name="include/Shader.h"/>
+    <File Name="include/common.h"/>
     <File Name="include/stb_image.h"/>
+    <File Name="src/TextureLoader.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="src">
     <File Name="src/glad.c"/>
     <File Name="src/main.cpp"/>
-    <File Name="src/common.h"/>
     <File Name="src/Triangle.cpp"/>
     <VirtualDirectory Name="texture">
       <File Name="src/Texture/Texture_test.cpp"/>
       <File Name="src/Texture/shader.vs"/>
       <File Name="src/Texture/shader.fs" ExcludeProjConfig=""/>
     </VirtualDirectory>
+    <File Name="src/all_case.h"/>
+    <VirtualDirectory Name="Space">
+      <File Name="src/Space/Space_test.cpp"/>
+      <File Name="src/Space/CMakeLists.txt"/>
+      <File Name="src/Space/space_shader.fs"/>
+      <File Name="src/Space/space_shader.vs"/>
+    </VirtualDirectory>
+    <File Name="src/TextureLoader.cpp"/>
+    <File Name="include/GLBase.cpp"/>
+    <File Name="include/GLBase.h"/>
   </VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
@@ -52,6 +153,7 @@
     <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall;$(shell pkg-config --cflags glu glew glfw3)" C_Options="-g;-O0;-Wall;$(shell pkg-config --cflags glu glew glfw3)" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="include"/>
+        <IncludePath Value="src"/>
       </Compiler>
       <Linker Options="$(shell pkg-config --libs glu glew glfw3)" Required="yes">
         <Library Value="dl"/>
@@ -97,11 +199,14 @@
       </Completion>
     </Configuration>
     <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
-        <IncludePath Value="."/>
+      <Compiler Options="-O2;-std=c++11;-Wall;$(shell pkg-config --cflags glfw3 glu)" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="src"/>
+        <IncludePath Value="../includes"/>
         <Preprocessor Value="NDEBUG"/>
       </Compiler>
-      <Linker Options="" Required="yes"/>
+      <Linker Options="$(shell pkg-config --libs glfw3 glu)" Required="yes">
+        <Library Value="dl"/>
+      </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="" IntermediateDirectory="./Release" Command="$(WorkspacePath)/cmake-build-$(WorkspaceConfiguration)/bin/$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="CMake"/>

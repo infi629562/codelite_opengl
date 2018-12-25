@@ -54,6 +54,7 @@ int main(int argc, char **argv)
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
+	texture_exit();
 	glfwTerminate();
 
 	return 0;

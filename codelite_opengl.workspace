@@ -2,16 +2,19 @@
 <CodeLite_Workspace Name="codelite_opengl" Database="" Version="10.0.0">
   <Project Name="opengl_01" Path="opengl_01/opengl_01.project" Active="Yes"/>
   <Project Name="opengl_env" Path="opengl_env/opengl_env.project" Active="No"/>
+  <Project Name="test" Path="test/test.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="opengl_01" ConfigName="Debug"/>
       <Project Name="opengl_env" ConfigName="Debug"/>
+      <Project Name="test" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Environment/>
       <Project Name="opengl_01" ConfigName="Release"/>
       <Project Name="opengl_env" ConfigName="Release"/>
+      <Project Name="test" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
