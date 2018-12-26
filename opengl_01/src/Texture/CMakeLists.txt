@@ -1,0 +1,6 @@
+
+message("[COPY]: " ${CMAKE_BINARY_DIR})
+
+file(COPY shader.vs DESTINATION ${CMAKE_BINARY_DIR})
+
+file(COPY shader.fs DESTINATION ${CMAKE_BINARY_DIR})

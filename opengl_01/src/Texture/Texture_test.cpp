@@ -11,10 +11,6 @@
 #include <common.h>
 #include <TextureLoader.h>
 
-#define TEXTURE_WALL "/home/infichen/workspace/codelite/gitbase/codelite_opengl/opengl_01/src/Texture/wall.jpg"
-#define TEXTURE_DOTA2 "/home/infichen/Pictures/800x600/color.bmp"
-#define TEXTURE_T1 "/home/infichen/Pictures/1080x1920/t2.jpg"
-#define TEXTURE_FACE "/home/infichen/Pictures/800x600/awesomeface.png"
 
 #define TEXTURE_BASE TEXTURE_T1
 #define TEXTURE_UP	TEXTURE_FACE
@@ -43,7 +39,6 @@ void texture_init()
 	//build and compile our shader program
 
 	shaderProgram = std::make_shared<Shader>(SHADER_VERTEX, SHADER_FRAGMENT);
-	PDBG(shaderProgram.get());
 
 	glGenVertexArrays(1, &VAO);
 	glBindVertexArray(VAO);

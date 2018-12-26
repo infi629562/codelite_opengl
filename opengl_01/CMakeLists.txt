@@ -10,11 +10,9 @@ set(PROJECT_PATH "${CMAKE_SOURCE_DIR}/opengl_01")
 
 
 #{{{{ User Code 1
-execute_process(COMMAND cp -fv ${PROJECT_PATH}/src/Texture/shader.vs .
-				COMMAND cp -fv ${PROJECT_PATH}/src/Texture/shader.fs .)
-message("project_source_dir = " ${PROJECT_SOURCE_DIR})
-set(ENV{RESOURCE_DIR} ${PROJECT_SOURCE_DIR}/..)
-message("get env " $ENV{RESOURCE_DIR})
+add_subdirectory("src/Texture")
+add_subdirectory("src/Space")
+add_subdirectory("src/Cube")
 #}}}}
 
 include_directories(
@@ -68,12 +66,14 @@ set ( C_SRCS
 
 # Define the CXX sources
 set ( CXX_SRCS
-    ${CMAKE_SOURCE_DIR}/opengl_01/include/GLBase.cpp
     ${CMAKE_SOURCE_DIR}/opengl_01/src/main.cpp
     ${CMAKE_SOURCE_DIR}/opengl_01/src/Triangle.cpp
     ${CMAKE_SOURCE_DIR}/opengl_01/src/TextureLoader.cpp
+    ${CMAKE_SOURCE_DIR}/opengl_01/src/GLBase.cpp
     ${CMAKE_SOURCE_DIR}/opengl_01/src/Texture/Texture_test.cpp
     ${CMAKE_SOURCE_DIR}/opengl_01/src/Space/Space_test.cpp
+    ${CMAKE_SOURCE_DIR}/opengl_01/src/Space/SpaceTest.cpp
+    ${CMAKE_SOURCE_DIR}/opengl_01/src/Cube/CubeTest.cpp
 )
 
 set_source_files_properties(
